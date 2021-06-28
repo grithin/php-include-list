@@ -1,5 +1,5 @@
 # PHP IncludeList
-Handles ensuring avoidance of duplicate inclusions, and handles chained dependencies.
+For web asset inclusion management: Handles ensuring avoidance of duplicate inclusions, and handles chained dependencies.
 
 ```php
 

@@ -4,12 +4,12 @@ For web asset inclusion management: Handles ensuring avoidance of duplicate incl
 ```php
 
 $JsAssets = new IncludeList;
-$JsAssets->available_add('jquery', 'js/jquery.js');
-$JsAssets->available_add('jquery-ui', 'js/jquery-ui.js', ['jquery']);
+$JsAssets->available_add('js/jquery.js', 'jquery');
+$JsAssets->available_add('js/jquery-ui.js', 'jquery-ui', ['jquery']);
 $JsAssets->paths(); #> []
 
 $JsAssets->add('index.js', false, ['jquery-ui']);
-$JsAssets->paths(); #> ["jquery", "jquery-ui", "index.js"]
+$JsAssets->paths(); #> ["js/jquery.js",  "js/jquery-ui.js", "index.js"]
 ```
 
 
